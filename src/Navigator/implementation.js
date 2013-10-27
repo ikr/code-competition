@@ -44,7 +44,7 @@
         },
 
         currentPage = function (offset, rowsPerPage) {
-            return Math.ceil(offset / rowsPerPage) + 1;
+            return Math.floor(offset / rowsPerPage) + 1;
         },
 
         pageNumbersText = function (offset, total, rowsPerPage, maxNavigatorSize) {
@@ -73,6 +73,10 @@
             (function (msg) {
                 assertEq(currentPage(10, 10), 2, msg);
             }('currentPage for row 10 must be 2 if page size is 10'));
+
+            (function (msg) {
+                assertEq(currentPage(9, 10), 1, msg);
+            }('currentPage for row 9 must be 1 if page size is 10'));
 
             (function (msg) {
                 assertEq(maxPage(1004, 10), 101, msg);
