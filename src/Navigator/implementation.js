@@ -2,10 +2,11 @@
     'use strict';
 
     var pageInterval = function (intervalMiddle, maxIntervalSize, maxPage) {
-            var radius = Math.floor(maxIntervalSize / 2),
+            var diameter = (maxIntervalSize > maxPage) ? maxPage : maxIntervalSize,
+                radius = Math.floor(diameter / 2),
 
                 result = [
-                    intervalMiddle - radius + (maxIntervalSize + 1) % 2,
+                    intervalMiddle - radius + (diameter + 1) % 2,
                     intervalMiddle + radius
                 ];
 
