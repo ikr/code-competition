@@ -35,7 +35,7 @@
                 );
             }
 
-            return numbers.join(' ');
+            return numbers.join(' ') ? numbers.join(' ') : '[1]';
         },
 
         maxPage = function (total, rowsPerPage) {
@@ -108,6 +108,10 @@
             (function (msg) {
                 assertEq(pageInterval(1, 0, 0).join(), '1,1', msg);
             }('pageInterval must work in empty case'));
+
+            (function (msg) {
+                assertEq(pageInterval(1, 3, 1).join(), '1,1', msg);
+            }('pageInterval must work when max interval size is above max page'));
 
             (function (msg) {
                 assertEq(pageNumbersText(10, 101, 10, 3), '1 [2] 3', msg);
