@@ -2,8 +2,8 @@
 
 class EnvironmentTest extends PHPUnit_Framework_TestCase
 {
-    public function testPHPUNITIsRunning()
+    public function testAllRunsFineInV8Js()
     {
-        $this->assertTrue(true);
+        $this->assertSame('', Navigator\pageNumbersText(1, 2, 3, 4));
     }
 }
