@@ -9,8 +9,9 @@ the-packages:
       - libv8-dev
       - curl
 
-v8js-0.1.3:
+v8js:
   pecl.installed:
+    - version: 0.1.3
     - defaults: Y
     - require:
       - pkg: the-packages
