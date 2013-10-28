@@ -18,7 +18,7 @@ tools:
         config:
             standard: PSR1
     php_code_coverage:
-        test_command: './acceptance_test.php && ./phpunit'
+        test_command: './acceptance_test.php && ./vendor/bin/phpunit'
         filter:
             paths: ['src/*']
         config_path: ./
