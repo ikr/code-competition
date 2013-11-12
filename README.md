@@ -1,6 +1,5 @@
-_This solution's metrics_
+_This solution's metrics -- irrelevant, it's JavaScript. Strictly JSLint-ed though :)_
 
-(COMING SOON)
 
 Code beauty contest
 ===================
